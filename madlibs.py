@@ -23,19 +23,25 @@ def user_input(parts_of_speech):
                 return user_value
                 break
 
-
-print('It was a %s, cold November day. I woke up to the %s smell of %s roasting \
-in the %s downstairs. I %s down the stairs to see if I could help %s the dinner. \
-My mom said, "see if %s needs a fresh %s." So I carried a tray of glasses full of \
- %s into the %s room. When I got there, I could not believe my %s! There were %s \
- %s on the %s!' % (user_input("adjective"), user_input("adjective"), user_input("type of bird"),
- user_input("room in a house"), user_input("verb(past tense)"), user_input("verb"),
- user_input("relative name's"), user_input("noun"), user_input("a liquid"),
- user_input("verb ending in -ing"), user_input("part of the body(plural)"), user_input("plural noun"),
- user_input("verb ending in -ing"), user_input("noun")))
+def full_story():
+   return story % (user_input("adjective"), user_input("adjective"), user_input("type of bird"),
+     user_input("room in a house"), user_input("verb(past tense)"), user_input("verb"),
+     user_input("relative name's"), user_input("noun"), user_input("a liquid"),
+     user_input("verb ending in -ing"), user_input("part of the body(plural)"), user_input("plural noun"),
+     user_input("verb ending in -ing"), user_input("noun"))
 
 def split_story(story):
     words = story.split()
-    #print(words)
+    return words
 
-split_story(story)
+def list_all_story():
+    index = 0
+    for list_item in split_story(story):
+        return "{} ".format ( list_item)
+        index += 1
+
+
+def test():
+    print(full_story())
+
+test()
