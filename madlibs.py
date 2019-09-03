@@ -6,7 +6,7 @@ My mom said, "see if %s needs a fresh %s." So I carried a tray of glasses full o
  %s on the %s!'
 # ask user for input
 def user_input(parts_of_speech):
-    user_value = input("Enter %s: " % (parts_of_speech))
+    user_value = input("\033[35m Enter %s: " % (parts_of_speech))
     if user_value.isalpha():
         return user_value
     else:
@@ -14,15 +14,15 @@ def user_input(parts_of_speech):
         # while input is character or while input is number
         # ask the user to re-enter
         ##work on combination of string and character
-        while user_value.isalnum():
-            print("Please re-enter parts of speech")
-            user_value = input("Enter %s: " % (parts_of_speech))
-            if user_value.isalpha():
-                return user_value
-                break
-
-print(story % (user_input("adjective"), user_input("adjective"), user_input("type of bird"),
- user_input("room in a house"), user_input("verb(past tense)"), user_input("verb"),
- user_input("relative name's"), user_input("noun"), user_input("a liquid"),
- user_input("verb ending in -ing"), user_input("part of the body(plural)"), user_input("plural noun"),
- user_input("verb ending in -ing"), user_input("noun")))
+        while user_value.isalnum() or user_value.isnum():
+       
+                print("Please re-enter parts of speech")
+                user_value = input("Enter %s: " % (parts_of_speech))
+                if user_value.isalpha():
+                    return user_value
+                    break
+print(story % (user_input("\u001b[36m adjective"), user_input("\u001b[36m adjective"), user_input("\u001b[36m type of bird"),
+ user_input("\u001b[36m room in a house"), user_input("\u001b[36m verb(past tense)"), user_input("\u001b[36m verb"),
+ user_input("\u001b[36m relative name's"), user_input("\u001b[36m noun"), user_input("\u001b[36m a liquid"),
+ user_input("\u001b[36m verb ending in -ing"), user_input("\u001b[36m part of the body(plural)"), user_input("\u001b[36m plural noun"),
+ user_input("\u001b[36m verb ending in -ing"), user_input("\u001b[36m noun ")))
